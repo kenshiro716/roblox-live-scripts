@@ -14,7 +14,7 @@ for entry in index:
     }
 assert len(sources) >= 159, "Missing required server source entries"
 (root / "runtime-bundle.json").write_text(
-    json.dumps({"schema": 1, "sources": sources}, ensure_ascii=False, separators=(",", ":")) + "\n",
+    json.dumps({"schema": 1, "sources": sources, "setup": (root / "scripts/setup.lua").read_text(encoding="utf-8")}, ensure_ascii=False, separators=(",", ":")) + "\n",
     encoding="utf-8",
 )
 print(f"Built {len(sources)} server source entries")
