@@ -3,7 +3,7 @@
 Server code exported from Prime Fruits. The initial migration contains 37 Server ModuleScripts, 63 item server Scripts, 59 item ModuleScripts, and 63 client LocalScripts.
 
 ## Startup
-The installed GitHubLiveLoader loads and syntax-checks the 159 server source entries before invoking Server.Boot. Other server scripts are gated until Boot completes. Tools, remotes, folders, client scripts, and shared client data remain in the place because Roblox needs those Instances. Server source bodies are replaced with small GitHub bridge shims.
+The installed GitHubLiveLoader loads and syntax-checks the 159 server source entries, downloads scripts/setup.lua, and runs that GitHub script to clone Server and Items into ServerStorage before invoking Server.Boot. Other server scripts are gated until Boot completes. Published templates live under ServerStorage.GitHubTemplates. The live ServerStorage.Server and ServerStorage.Items folders are absent in Edit mode and created by the GitHub setup script during server startup. Do not delete GitHubTemplates: it contains the Tool properties, remotes, client scripts, and module bridge templates Roblox needs. Server source bodies are replaced with small GitHub bridge shims.
 
 Item scripts run when their tool scripts normally run, rather than all tools executing at server startup. ModuleScripts retain normal lazy require and per-instance caching.
 
