@@ -1,17 +1,14 @@
 {
-  "status": "studio-tested-awaiting-initial-place-publish",
-  "serverSources": 159,
-  "clientSourceBackups": 63,
+  "status": "runtime-reconstruction-tested-awaiting-place-publish",
+  "setupScript": "scripts/setup.lua",
+  "templates": "ServerStorage.GitHubTemplates",
   "tests": {
-    "syntax": "159 passed",
-    "boot": "passed",
-    "extraScript": "passed after boot",
-    "playerData": "loaded",
-    "itemInitialization": {
-      "Dragon-Dragon": "passed",
-      "Triple Dark Blade": "passed",
-      "Advanced Combat": "passed"
-    },
-    "bundleWorkflow": "success"
+    "serverSources": 159,
+    "toolsCreated": 61,
+    "boot": true,
+    "extraScript": true,
+    "clientLoadComplete": true,
+    "loadingOverlayTransparent": true,
+    "piratesCharacterSpawned": true
   }
 }
