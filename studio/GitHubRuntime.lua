@@ -3,6 +3,7 @@ local Http = game:GetService("HttpService")
 local Runtime = {}
 local BASE = "https://raw.githubusercontent.com/kenshiro716/roblox-live-scripts/main/"
 local sources
+local setupSource
 local loading = false
 local failure
 local bootState = "waiting"
@@ -22,6 +23,10 @@ function Runtime.Load()
     local ok, result = xpcall(function()
         local bundle = Http:JSONDecode(fetch("runtime-bundle.json"))
         assert(bundle.schema == 1 and type(bundle.sources) == "table", "Invalid GitHub bundle")
+        assert(type(bundle.setup) == "string", "GitHub bundle is missing setup code; wait for its build to finish")
+        setupSource = bundle.setup
+        local setupFunction, setupError = loadstring(setupSource, "GitHub/scripts/setup.lua")
+        assert(setupFunction, setupError)
         local count = 0
         for id, entry in pairs(bundle.sources) do
             assert(type(id) == "string" and type(entry.source) == "string", "Invalid source entry")
@@ -71,7 +76,7 @@ function Runtime.Boot()
         Runtime.Load()
         local templates = game:GetService("ServerStorage"):FindFirstChild("GitHubTemplates")
         assert(templates, "Missing GitHubTemplates; restore the published tool and module templates")
-        local installer, compileError = loadstring(fetch("scripts/setup.lua"), "GitHub/scripts/setup.lua")
+        local installer, compileError = loadstring(setupSource, "GitHub/scripts/setup.lua")
         assert(installer, compileError)
         installer(templates)
         local storage = game:GetService("ServerStorage")
