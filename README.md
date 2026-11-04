@@ -21,4 +21,4 @@ Enable Allow HTTP Requests and ServerScriptService.LoadStringEnabled. Test in St
 GitHub code has full server privileges. Never put tokens or credentials in this public repository.
 
 ## Recovery
-A full original source export is saved locally as migration-backup.json. The Studio backup folder is kept outside ServerStorage during migration and must be removed from the published place after successful testing. The initial migration preserves all tool assets and dependency Instances.
+A full original source export is saved locally as migration-backup.json. The initial migration preserves all tool assets and dependency Instances.
