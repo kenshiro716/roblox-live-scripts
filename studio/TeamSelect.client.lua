@@ -80,18 +80,18 @@ local t1 = {
 	Sea1 = Locations.Sea1[1].CFrame
 }
 
-CurrentCamera.CameraType = "Scriptable"
+if not LocalPlayer.Character then CurrentCamera.CameraType = "Scriptable" end
 
 local v24 = Realm.getCurrentSeaAsync()
 
-CurrentCamera.CFrame = ((if not v24 then nil else t1[v24])) or CurrentCamera.CFrame
+if not LocalPlayer.Character then CurrentCamera.CFrame = ((if not v24 then nil else t1[v24])) or CurrentCamera.CFrame end
 
 local CurrentCameraCFrame = CurrentCamera.CFrame
 
 local function fixcam()
 
 	if not LocalPlayer.Team then
-		CurrentCamera.CameraType = "Scriptable"
+		if not LocalPlayer.Character then CurrentCamera.CameraType = "Scriptable" end
 		CurrentCamera.CFrame = CurrentCameraCFrame
 		CurrentCamera.Focus = CurrentCamera.CFrame + CurrentCamera.CFrame.LookVector
 	end
@@ -100,7 +100,7 @@ end
 CurrentCamera:GetPropertyChangedSignal("CameraType"):Connect(function()
 
 	if not LocalPlayer.Team then
-		CurrentCamera.CameraType = "Scriptable"
+		if not LocalPlayer.Character then CurrentCamera.CameraType = "Scriptable" end
 		CurrentCamera.CFrame = CurrentCameraCFrame
 		CurrentCamera.Focus = CurrentCamera.CFrame + CurrentCamera.CFrame.LookVector
 	end
@@ -108,7 +108,7 @@ end)
 CurrentCamera:GetPropertyChangedSignal("CameraSubject"):Connect(function()
 
 	if not LocalPlayer.Team then
-		CurrentCamera.CameraType = "Scriptable"
+		if not LocalPlayer.Character then CurrentCamera.CameraType = "Scriptable" end
 		CurrentCamera.CFrame = CurrentCameraCFrame
 		CurrentCamera.Focus = CurrentCamera.CFrame + CurrentCamera.CFrame.LookVector
 	end
