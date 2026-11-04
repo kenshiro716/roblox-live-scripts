@@ -2,7 +2,7 @@ name: Build Roblox server bundle
 on:
   push:
     branches: [main]
-    paths: ['sources/**', 'source-index.json', 'tools/build_bundle.py']
+    paths: ['sources/**', 'source-index.json', 'tools/build_bundle.py', 'scripts/setup.lua']
   workflow_dispatch:
 permissions:
   contents: write
