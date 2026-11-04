@@ -1,1 +1,17 @@
-{"status":"uploaded-awaiting-studio-test","serverSources":159,"clientSourceBackups":63}
+{
+  "status": "studio-tested-awaiting-initial-place-publish",
+  "serverSources": 159,
+  "clientSourceBackups": 63,
+  "tests": {
+    "syntax": "159 passed",
+    "boot": "passed",
+    "extraScript": "passed after boot",
+    "playerData": "loaded",
+    "itemInitialization": {
+      "Dragon-Dragon": "passed",
+      "Triple Dark Blade": "passed",
+      "Advanced Combat": "passed"
+    },
+    "bundleWorkflow": "success"
+  }
+}
