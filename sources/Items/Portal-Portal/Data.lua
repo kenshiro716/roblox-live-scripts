@@ -1,0 +1,35 @@
+return {
+	Lvl = {
+		TAP = 1,
+		Z = 1,
+		X = 50,
+		F = 100,
+		C = 200,
+		V = 300,
+	},
+	Cost = {
+		TAP = 0,
+		Z = 15,
+		X = 50,
+		F = 25,
+		C = 100,
+		V = 100,
+	},
+	Cooldown = {
+		TAP = 3.5,
+		Z = 7.5,
+		X = 18.75,
+		F = 7.5,
+		C = 16.5,
+		V = 24,
+	},
+	Cap = 600,
+	damage = {
+		zdash = 140,
+		zimpact = 460,
+		xentry = 320,
+		fportal = 200,
+		cchains = 380,
+		vpull = 520,
+	},
+}

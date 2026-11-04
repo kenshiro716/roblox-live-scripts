@@ -1,0 +1,2215 @@
+[
+  {
+    "path": [
+      "Server",
+      "Config"
+    ],
+    "class": "ModuleScript",
+    "id": "source-001",
+    "file": "sources/Server/Config.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Util"
+    ],
+    "class": "ModuleScript",
+    "id": "source-002",
+    "file": "sources/Server/Util.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "RateLimiter"
+    ],
+    "class": "ModuleScript",
+    "id": "source-003",
+    "file": "sources/Server/RateLimiter.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "PlayerStore"
+    ],
+    "class": "ModuleScript",
+    "id": "source-004",
+    "file": "sources/Server/PlayerStore.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "ServerData"
+    ],
+    "class": "ModuleScript",
+    "id": "source-005",
+    "file": "sources/Server/ServerData.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Router"
+    ],
+    "class": "ModuleScript",
+    "id": "source-006",
+    "file": "sources/Server/Router.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Boot"
+    ],
+    "class": "ModuleScript",
+    "id": "source-007",
+    "file": "sources/Server/Boot.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "TeamService"
+    ],
+    "class": "ModuleScript",
+    "id": "source-008",
+    "file": "sources/Server/TeamService.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Handlers",
+      "PlayerCommands"
+    ],
+    "class": "ModuleScript",
+    "id": "source-009",
+    "file": "sources/Server/Handlers/PlayerCommands.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Handlers",
+      "QuestDefaults"
+    ],
+    "class": "ModuleScript",
+    "id": "source-010",
+    "file": "sources/Server/Handlers/QuestDefaults.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Handlers",
+      "ShopInventory"
+    ],
+    "class": "ModuleScript",
+    "id": "source-011",
+    "file": "sources/Server/Handlers/ShopInventory.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Handlers",
+      "Buso"
+    ],
+    "class": "ModuleScript",
+    "id": "source-012",
+    "file": "sources/Server/Handlers/Buso.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Handlers",
+      "Commands"
+    ],
+    "class": "ModuleScript",
+    "id": "source-013",
+    "file": "sources/Server/Handlers/Commands.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Handlers",
+      "FruitPassive"
+    ],
+    "class": "ModuleScript",
+    "id": "source-014",
+    "file": "sources/Server/Handlers/FruitPassive.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Handlers",
+      "questsystem"
+    ],
+    "class": "ModuleScript",
+    "id": "source-015",
+    "file": "sources/Server/Handlers/questsystem.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Handlers",
+      "bonusmomentsguide"
+    ],
+    "class": "ModuleScript",
+    "id": "source-016",
+    "file": "sources/Server/Handlers/bonusmomentsguide.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Handlers",
+      "modificationfunction"
+    ],
+    "class": "ModuleScript",
+    "id": "source-017",
+    "file": "sources/Server/Handlers/modificationfunction.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Handlers",
+      "droprewards"
+    ],
+    "class": "ModuleScript",
+    "id": "source-018",
+    "file": "sources/Server/Handlers/droprewards.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Handlers",
+      "progression"
+    ],
+    "class": "ModuleScript",
+    "id": "source-019",
+    "file": "sources/Server/Handlers/progression.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Handlers",
+      "profile"
+    ],
+    "class": "ModuleScript",
+    "id": "source-020",
+    "file": "sources/Server/Handlers/profile.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Handlers",
+      "stats"
+    ],
+    "class": "ModuleScript",
+    "id": "source-021",
+    "file": "sources/Server/Handlers/stats.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Handlers",
+      "modifications"
+    ],
+    "class": "ModuleScript",
+    "id": "source-022",
+    "file": "sources/Server/Handlers/modifications.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Services",
+      "TestingService"
+    ],
+    "class": "ModuleScript",
+    "id": "source-023",
+    "file": "sources/Server/Services/TestingService.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Services",
+      "RealmService"
+    ],
+    "class": "ModuleScript",
+    "id": "source-024",
+    "file": "sources/Server/Services/RealmService.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Services",
+      "SharedServices"
+    ],
+    "class": "ModuleScript",
+    "id": "source-025",
+    "file": "sources/Server/Services/SharedServices.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Services",
+      "AssetStreaming"
+    ],
+    "class": "ModuleScript",
+    "id": "source-026",
+    "file": "sources/Server/Services/AssetStreaming.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Compat",
+      "ConfigService"
+    ],
+    "class": "ModuleScript",
+    "id": "source-027",
+    "file": "sources/Server/Compat/ConfigService.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Compat",
+      "Movesets"
+    ],
+    "class": "ModuleScript",
+    "id": "source-028",
+    "file": "sources/Server/Compat/Movesets.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Compat",
+      "PositionValidationService"
+    ],
+    "class": "ModuleScript",
+    "id": "source-029",
+    "file": "sources/Server/Compat/PositionValidationService.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Compat",
+      "GunService"
+    ],
+    "class": "ModuleScript",
+    "id": "source-030",
+    "file": "sources/Server/Compat/GunService.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Compat",
+      "MapServices"
+    ],
+    "class": "ModuleScript",
+    "id": "source-031",
+    "file": "sources/Server/Compat/MapServices.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Compat",
+      "BonusMomentsService"
+    ],
+    "class": "ModuleScript",
+    "id": "source-032",
+    "file": "sources/Server/Compat/BonusMomentsService.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Compat",
+      "BloxFruitsStars"
+    ],
+    "class": "ModuleScript",
+    "id": "source-033",
+    "file": "sources/Server/Compat/BloxFruitsStars.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Compat",
+      "ComingSoonService"
+    ],
+    "class": "ModuleScript",
+    "id": "source-034",
+    "file": "sources/Server/Compat/ComingSoonService.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Compat",
+      "LiveOpsService"
+    ],
+    "class": "ModuleScript",
+    "id": "source-035",
+    "file": "sources/Server/Compat/LiveOpsService.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Compat",
+      "CombatService"
+    ],
+    "class": "ModuleScript",
+    "id": "source-036",
+    "file": "sources/Server/Compat/CombatService.lua"
+  },
+  {
+    "path": [
+      "Server",
+      "Compat",
+      "GachaSolver"
+    ],
+    "class": "ModuleScript",
+    "id": "source-037",
+    "file": "sources/Server/Compat/GachaSolver.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Celestial Art",
+      "Script"
+    ],
+    "class": "Script",
+    "id": "source-038",
+    "file": "sources/Items/Celestial Art/Script.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Celestial Art",
+      "Controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-039",
+    "file": "sources/Items/Celestial Art/Controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dragonheart",
+      "Script"
+    ],
+    "class": "Script",
+    "id": "source-040",
+    "file": "sources/Items/Dragonheart/Script.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dragonheart",
+      "Controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-041",
+    "file": "sources/Items/Dragonheart/Controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dragonstorm",
+      "Script"
+    ],
+    "class": "Script",
+    "id": "source-042",
+    "file": "sources/Items/Dragonstorm/Script.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dragonstorm",
+      "Welding"
+    ],
+    "class": "Script",
+    "id": "source-043",
+    "file": "sources/Items/Dragonstorm/Welding.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dragonstorm",
+      "Controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-044",
+    "file": "sources/Items/Dragonstorm/Controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dragon-Dragon",
+      "Script"
+    ],
+    "class": "Script",
+    "id": "source-045",
+    "file": "sources/Items/Dragon-Dragon/Script.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dragon-Dragon",
+      "Script",
+      "dragonform"
+    ],
+    "class": "ModuleScript",
+    "id": "source-046",
+    "file": "sources/Items/Dragon-Dragon/Script/dragonform.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dragon-Dragon",
+      "Controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-047",
+    "file": "sources/Items/Dragon-Dragon/Controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dragon-Dragon",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-048",
+    "file": "sources/Items/Dragon-Dragon/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Advanced Combat",
+      "Script"
+    ],
+    "class": "Script",
+    "id": "source-049",
+    "file": "sources/Items/Advanced Combat/Script.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Advanced Combat",
+      "Controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-050",
+    "file": "sources/Items/Advanced Combat/Controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Advanced Combat",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-051",
+    "file": "sources/Items/Advanced Combat/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "The Sword Of The Brat",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-052",
+    "file": "sources/Items/The Sword Of The Brat/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "The Sword Of The Brat",
+      "Script"
+    ],
+    "class": "Script",
+    "id": "source-053",
+    "file": "sources/Items/The Sword Of The Brat/Script.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "The Sword Of The Brat",
+      "Controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-054",
+    "file": "sources/Items/The Sword Of The Brat/Controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "The Sword Of The Brat",
+      "Controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-055",
+    "file": "sources/Items/The Sword Of The Brat/Controller.source-055.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Triple Dark Blade",
+      "Script"
+    ],
+    "class": "Script",
+    "id": "source-056",
+    "file": "sources/Items/Triple Dark Blade/Script.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Triple Dark Blade",
+      "Tool"
+    ],
+    "class": "LocalScript",
+    "id": "source-057",
+    "file": "sources/Items/Triple Dark Blade/Tool.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Triple Dark Blade",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-058",
+    "file": "sources/Items/Triple Dark Blade/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Triple Dark Blade",
+      "Controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-059",
+    "file": "sources/Items/Triple Dark Blade/Controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Kitsune-Kitsune",
+      "Script"
+    ],
+    "class": "Script",
+    "id": "source-060",
+    "file": "sources/Items/Kitsune-Kitsune/Script.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Kitsune-Kitsune",
+      "Controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-061",
+    "file": "sources/Items/Kitsune-Kitsune/Controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Kitsune-Kitsune",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-062",
+    "file": "sources/Items/Kitsune-Kitsune/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Portal-Portal",
+      "LocalScript"
+    ],
+    "class": "LocalScript",
+    "id": "source-063",
+    "file": "sources/Items/Portal-Portal/LocalScript.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Portal-Portal",
+      "Script"
+    ],
+    "class": "Script",
+    "id": "source-064",
+    "file": "sources/Items/Portal-Portal/Script.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Portal-Portal",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-065",
+    "file": "sources/Items/Portal-Portal/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Magnet-Magnet",
+      "Controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-066",
+    "file": "sources/Items/Magnet-Magnet/Controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Magnet-Magnet",
+      "Script"
+    ],
+    "class": "Script",
+    "id": "source-067",
+    "file": "sources/Items/Magnet-Magnet/Script.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Magnet-Magnet",
+      "ServerRuntime"
+    ],
+    "class": "Script",
+    "id": "source-068",
+    "file": "sources/Items/Magnet-Magnet/ServerRuntime.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Magnet-Magnet",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-069",
+    "file": "sources/Items/Magnet-Magnet/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Empyrean (Kitsune)-Empyrean (Kitsune)",
+      "LocalScript"
+    ],
+    "class": "LocalScript",
+    "id": "source-070",
+    "file": "sources/Items/Empyrean (Kitsune)-Empyrean (Kitsune)/LocalScript.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Empyrean (Kitsune)-Empyrean (Kitsune)",
+      "Script"
+    ],
+    "class": "Script",
+    "id": "source-071",
+    "file": "sources/Items/Empyrean (Kitsune)-Empyrean (Kitsune)/Script.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Empyrean (Kitsune)-Empyrean (Kitsune)",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-072",
+    "file": "sources/Items/Empyrean (Kitsune)-Empyrean (Kitsune)/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Rocket-Rocket",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-073",
+    "file": "sources/Items/Rocket-Rocket/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Rocket-Rocket",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-074",
+    "file": "sources/Items/Rocket-Rocket/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Rocket-Rocket",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-075",
+    "file": "sources/Items/Rocket-Rocket/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Spin-Spin",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-076",
+    "file": "sources/Items/Spin-Spin/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Spin-Spin",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-077",
+    "file": "sources/Items/Spin-Spin/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Spin-Spin",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-078",
+    "file": "sources/Items/Spin-Spin/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Blade-Blade",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-079",
+    "file": "sources/Items/Blade-Blade/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Blade-Blade",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-080",
+    "file": "sources/Items/Blade-Blade/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Blade-Blade",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-081",
+    "file": "sources/Items/Blade-Blade/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Spring-Spring",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-082",
+    "file": "sources/Items/Spring-Spring/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Spring-Spring",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-083",
+    "file": "sources/Items/Spring-Spring/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Spring-Spring",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-084",
+    "file": "sources/Items/Spring-Spring/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Bomb-Bomb",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-085",
+    "file": "sources/Items/Bomb-Bomb/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Bomb-Bomb",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-086",
+    "file": "sources/Items/Bomb-Bomb/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Bomb-Bomb",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-087",
+    "file": "sources/Items/Bomb-Bomb/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Smoke-Smoke",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-088",
+    "file": "sources/Items/Smoke-Smoke/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Smoke-Smoke",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-089",
+    "file": "sources/Items/Smoke-Smoke/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Smoke-Smoke",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-090",
+    "file": "sources/Items/Smoke-Smoke/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Spike-Spike",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-091",
+    "file": "sources/Items/Spike-Spike/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Spike-Spike",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-092",
+    "file": "sources/Items/Spike-Spike/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Spike-Spike",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-093",
+    "file": "sources/Items/Spike-Spike/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Flame-Flame",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-094",
+    "file": "sources/Items/Flame-Flame/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Flame-Flame",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-095",
+    "file": "sources/Items/Flame-Flame/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Flame-Flame",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-096",
+    "file": "sources/Items/Flame-Flame/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Ice-Ice",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-097",
+    "file": "sources/Items/Ice-Ice/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Ice-Ice",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-098",
+    "file": "sources/Items/Ice-Ice/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Ice-Ice",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-099",
+    "file": "sources/Items/Ice-Ice/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Sand-Sand",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-100",
+    "file": "sources/Items/Sand-Sand/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Sand-Sand",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-101",
+    "file": "sources/Items/Sand-Sand/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Sand-Sand",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-102",
+    "file": "sources/Items/Sand-Sand/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dark-Dark",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-103",
+    "file": "sources/Items/Dark-Dark/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dark-Dark",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-104",
+    "file": "sources/Items/Dark-Dark/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dark-Dark",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-105",
+    "file": "sources/Items/Dark-Dark/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Eagle-Eagle",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-106",
+    "file": "sources/Items/Eagle-Eagle/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Eagle-Eagle",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-107",
+    "file": "sources/Items/Eagle-Eagle/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Eagle-Eagle",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-108",
+    "file": "sources/Items/Eagle-Eagle/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Diamond-Diamond",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-109",
+    "file": "sources/Items/Diamond-Diamond/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Diamond-Diamond",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-110",
+    "file": "sources/Items/Diamond-Diamond/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Diamond-Diamond",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-111",
+    "file": "sources/Items/Diamond-Diamond/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Light-Light",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-112",
+    "file": "sources/Items/Light-Light/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Light-Light",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-113",
+    "file": "sources/Items/Light-Light/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Light-Light",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-114",
+    "file": "sources/Items/Light-Light/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Rubber-Rubber",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-115",
+    "file": "sources/Items/Rubber-Rubber/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Rubber-Rubber",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-116",
+    "file": "sources/Items/Rubber-Rubber/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Rubber-Rubber",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-117",
+    "file": "sources/Items/Rubber-Rubber/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Ghost-Ghost",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-118",
+    "file": "sources/Items/Ghost-Ghost/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Ghost-Ghost",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-119",
+    "file": "sources/Items/Ghost-Ghost/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Ghost-Ghost",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-120",
+    "file": "sources/Items/Ghost-Ghost/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Magma-Magma",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-121",
+    "file": "sources/Items/Magma-Magma/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Magma-Magma",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-122",
+    "file": "sources/Items/Magma-Magma/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Magma-Magma",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-123",
+    "file": "sources/Items/Magma-Magma/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Quake-Quake",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-124",
+    "file": "sources/Items/Quake-Quake/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Quake-Quake",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-125",
+    "file": "sources/Items/Quake-Quake/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Quake-Quake",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-126",
+    "file": "sources/Items/Quake-Quake/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Buddha-Buddha",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-127",
+    "file": "sources/Items/Buddha-Buddha/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Buddha-Buddha",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-128",
+    "file": "sources/Items/Buddha-Buddha/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Buddha-Buddha",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-129",
+    "file": "sources/Items/Buddha-Buddha/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Love-Love",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-130",
+    "file": "sources/Items/Love-Love/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Love-Love",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-131",
+    "file": "sources/Items/Love-Love/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Love-Love",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-132",
+    "file": "sources/Items/Love-Love/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Creation-Creation",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-133",
+    "file": "sources/Items/Creation-Creation/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Creation-Creation",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-134",
+    "file": "sources/Items/Creation-Creation/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Creation-Creation",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-135",
+    "file": "sources/Items/Creation-Creation/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Spider-Spider",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-136",
+    "file": "sources/Items/Spider-Spider/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Spider-Spider",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-137",
+    "file": "sources/Items/Spider-Spider/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Spider-Spider",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-138",
+    "file": "sources/Items/Spider-Spider/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Sound-Sound",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-139",
+    "file": "sources/Items/Sound-Sound/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Sound-Sound",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-140",
+    "file": "sources/Items/Sound-Sound/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Sound-Sound",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-141",
+    "file": "sources/Items/Sound-Sound/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Phoenix-Phoenix",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-142",
+    "file": "sources/Items/Phoenix-Phoenix/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Phoenix-Phoenix",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-143",
+    "file": "sources/Items/Phoenix-Phoenix/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Phoenix-Phoenix",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-144",
+    "file": "sources/Items/Phoenix-Phoenix/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Lightning-Lightning",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-145",
+    "file": "sources/Items/Lightning-Lightning/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Lightning-Lightning",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-146",
+    "file": "sources/Items/Lightning-Lightning/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Lightning-Lightning",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-147",
+    "file": "sources/Items/Lightning-Lightning/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Pain-Pain",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-148",
+    "file": "sources/Items/Pain-Pain/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Pain-Pain",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-149",
+    "file": "sources/Items/Pain-Pain/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Pain-Pain",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-150",
+    "file": "sources/Items/Pain-Pain/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Blizzard-Blizzard",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-151",
+    "file": "sources/Items/Blizzard-Blizzard/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Blizzard-Blizzard",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-152",
+    "file": "sources/Items/Blizzard-Blizzard/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Blizzard-Blizzard",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-153",
+    "file": "sources/Items/Blizzard-Blizzard/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Gravity-Gravity",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-154",
+    "file": "sources/Items/Gravity-Gravity/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Gravity-Gravity",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-155",
+    "file": "sources/Items/Gravity-Gravity/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Gravity-Gravity",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-156",
+    "file": "sources/Items/Gravity-Gravity/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Mammoth-Mammoth",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-157",
+    "file": "sources/Items/Mammoth-Mammoth/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Mammoth-Mammoth",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-158",
+    "file": "sources/Items/Mammoth-Mammoth/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Mammoth-Mammoth",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-159",
+    "file": "sources/Items/Mammoth-Mammoth/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "T-Rex-T-Rex",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-160",
+    "file": "sources/Items/T-Rex-T-Rex/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "T-Rex-T-Rex",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-161",
+    "file": "sources/Items/T-Rex-T-Rex/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "T-Rex-T-Rex",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-162",
+    "file": "sources/Items/T-Rex-T-Rex/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dough-Dough",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-163",
+    "file": "sources/Items/Dough-Dough/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dough-Dough",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-164",
+    "file": "sources/Items/Dough-Dough/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dough-Dough",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-165",
+    "file": "sources/Items/Dough-Dough/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Shadow-Shadow",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-166",
+    "file": "sources/Items/Shadow-Shadow/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Shadow-Shadow",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-167",
+    "file": "sources/Items/Shadow-Shadow/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Shadow-Shadow",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-168",
+    "file": "sources/Items/Shadow-Shadow/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Venom-Venom",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-169",
+    "file": "sources/Items/Venom-Venom/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Venom-Venom",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-170",
+    "file": "sources/Items/Venom-Venom/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Venom-Venom",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-171",
+    "file": "sources/Items/Venom-Venom/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Gas-Gas",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-172",
+    "file": "sources/Items/Gas-Gas/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Gas-Gas",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-173",
+    "file": "sources/Items/Gas-Gas/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Gas-Gas",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-174",
+    "file": "sources/Items/Gas-Gas/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Spirit-Spirit",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-175",
+    "file": "sources/Items/Spirit-Spirit/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Spirit-Spirit",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-176",
+    "file": "sources/Items/Spirit-Spirit/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Spirit-Spirit",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-177",
+    "file": "sources/Items/Spirit-Spirit/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Tiger-Tiger",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-178",
+    "file": "sources/Items/Tiger-Tiger/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Tiger-Tiger",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-179",
+    "file": "sources/Items/Tiger-Tiger/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Tiger-Tiger",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-180",
+    "file": "sources/Items/Tiger-Tiger/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Yeti-Yeti",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-181",
+    "file": "sources/Items/Yeti-Yeti/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Yeti-Yeti",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-182",
+    "file": "sources/Items/Yeti-Yeti/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Yeti-Yeti",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-183",
+    "file": "sources/Items/Yeti-Yeti/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Control-Control",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-184",
+    "file": "sources/Items/Control-Control/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Control-Control",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-185",
+    "file": "sources/Items/Control-Control/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Control-Control",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-186",
+    "file": "sources/Items/Control-Control/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Combat",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-187",
+    "file": "sources/Items/Combat/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Combat",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-188",
+    "file": "sources/Items/Combat/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Combat",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-189",
+    "file": "sources/Items/Combat/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dark Step",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-190",
+    "file": "sources/Items/Dark Step/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dark Step",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-191",
+    "file": "sources/Items/Dark Step/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dark Step",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-192",
+    "file": "sources/Items/Dark Step/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Electric",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-193",
+    "file": "sources/Items/Electric/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Electric",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-194",
+    "file": "sources/Items/Electric/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Electric",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-195",
+    "file": "sources/Items/Electric/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Water Kung Fu",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-196",
+    "file": "sources/Items/Water Kung Fu/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Water Kung Fu",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-197",
+    "file": "sources/Items/Water Kung Fu/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Water Kung Fu",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-198",
+    "file": "sources/Items/Water Kung Fu/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dragon Breath",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-199",
+    "file": "sources/Items/Dragon Breath/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dragon Breath",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-200",
+    "file": "sources/Items/Dragon Breath/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dragon Breath",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-201",
+    "file": "sources/Items/Dragon Breath/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Superhuman",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-202",
+    "file": "sources/Items/Superhuman/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Superhuman",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-203",
+    "file": "sources/Items/Superhuman/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Superhuman",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-204",
+    "file": "sources/Items/Superhuman/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Death Step",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-205",
+    "file": "sources/Items/Death Step/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Death Step",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-206",
+    "file": "sources/Items/Death Step/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Death Step",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-207",
+    "file": "sources/Items/Death Step/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Sharkman Karate",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-208",
+    "file": "sources/Items/Sharkman Karate/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Sharkman Karate",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-209",
+    "file": "sources/Items/Sharkman Karate/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Sharkman Karate",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-210",
+    "file": "sources/Items/Sharkman Karate/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Electric Claw",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-211",
+    "file": "sources/Items/Electric Claw/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Electric Claw",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-212",
+    "file": "sources/Items/Electric Claw/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Electric Claw",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-213",
+    "file": "sources/Items/Electric Claw/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dragon Talon",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-214",
+    "file": "sources/Items/Dragon Talon/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dragon Talon",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-215",
+    "file": "sources/Items/Dragon Talon/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Dragon Talon",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-216",
+    "file": "sources/Items/Dragon Talon/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Godhuman",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-217",
+    "file": "sources/Items/Godhuman/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Godhuman",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-218",
+    "file": "sources/Items/Godhuman/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Godhuman",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-219",
+    "file": "sources/Items/Godhuman/server.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Sanguine Art",
+      "Data"
+    ],
+    "class": "ModuleScript",
+    "id": "source-220",
+    "file": "sources/Items/Sanguine Art/Data.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Sanguine Art",
+      "controller"
+    ],
+    "class": "LocalScript",
+    "id": "source-221",
+    "file": "sources/Items/Sanguine Art/controller.lua"
+  },
+  {
+    "path": [
+      "Items",
+      "Sanguine Art",
+      "server"
+    ],
+    "class": "Script",
+    "id": "source-222",
+    "file": "sources/Items/Sanguine Art/server.lua"
+  }
+]
