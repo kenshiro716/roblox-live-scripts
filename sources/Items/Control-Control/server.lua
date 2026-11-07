@@ -242,7 +242,7 @@ local function releaseCast(player,character,root,key,shot)
         local victim=targetAt(character,root.Position,target,8)
         if m=="Base" then
             fx("X_Outside",params(player,character,root,{Stage=2,StartCFrame=cf,EndCFrame=CFrame.new(target),
-                Distance=(target-root.Position).Magnitude,Duration=0.35,ThrowDirection=cf.LookVector,
+                Distance=(target-root.Position).Magnitude,Duration=0.35,ThrowDirection=cf,
                 EnemyChar=victim and victim.model,KnockCFrame=CFrame.new(target+cf.LookVector*12),KnifeDistance=120}))
             line(character,root.Position,target,7,data.Damage.X)
         elseif m=="Dagger" then
