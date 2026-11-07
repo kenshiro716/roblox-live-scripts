@@ -18,6 +18,9 @@ local room, roomCharacter, expires, mode = nil, nil, 0, "Dagger"
 local meter, combo, comboAt = 0, 0, 0
 local started, castMode, proxies, cubes = {}, {}, {}, {}
 local ended, kit = false, nil
+local knifeEvent=tool:FindFirstChild("KnifeLanded")
+if not knifeEvent then knifeEvent=Instance.new("RemoteEvent"); knifeEvent.Name="KnifeLanded"; knifeEvent.Parent=tool end
+local pendingTeleport
 local MAX_CUBES = 3
 local function finite(v)
     return typeof(v) == "Vector3" and v.X == v.X and v.Y == v.Y and v.Z == v.Z
@@ -60,10 +63,15 @@ local function spend(character,key)
     return melee.spend(character,data.Cost[key] or 0)
 end
 local function updateMeter(character, amount)
+    character=character or (kit and kit:getcharacter())
     meter=math.clamp(meter+amount,0,100)
     tool:SetAttribute("MaximumOutput",meter)
     tool:SetAttribute("MaximumOutputMax",100)
-    if character then character:SetAttribute("ControlMaximumOutput",meter) end
+    if character then
+        character:SetAttribute("ControlMaximumOutput",meter)
+        local rage=kit and kit:ragevalue(character)
+        if rage then rage.Value=meter end
+    end
 end
 local function strike(character, position, radius, damage, stun)
     local landed={}
@@ -99,6 +107,9 @@ local function setMode(player, character, root, newMode, override)
     mode=newMode
     tool:SetAttribute("ControlMode",mode)
     character:SetAttribute("ControlMode",mode)
+    local modeProxy=character:FindFirstChild("ControlModeProxy")
+    if not modeProxy then modeProxy=Instance.new("StringValue"); modeProxy.Name="ControlModeProxy"; modeProxy.Parent=character end
+    modeProxy.Value=mode
     fx("DomainCharge",params(player,character,root,{Dagger="Equip",CurrentMode=mode,Override=override==true}))
 end
 local function closeRoom()
@@ -106,6 +117,8 @@ local function closeRoom()
     if character then
         character:SetAttribute("ControlRoomActive",false)
         character:SetAttribute("ControlMode","Base")
+        local modeProxy=character:FindFirstChild("ControlModeProxy")
+        if modeProxy then modeProxy.Value="Base" end
         character:SetAttribute("AuraActive",false)
     end
     if room then room:SetAttribute("Active",false); Debris:AddItem(room,1.5) end
@@ -171,7 +184,7 @@ local function beginCast(player,character,root,key)
     castMode[key]=current(character,root.Position) and mode or "Base"
     local m=castMode[key]
     if key=="Z" then
-        if not room then fx("DomainCharge",params(player,character,root,{Duration=3})) end
+        if not room then fx("DomainCharge",params(player,character,root,{Duration=3,Holding=kit.effectholding})) end
     elseif key=="X" and m~="Fist" then
         fx(m=="Base" and "X_Outside" or "NewDaggerX",params(player,character,root,{Stage=1,Holding=kit.effectholding}))
     elseif key=="C" then
@@ -184,8 +197,8 @@ local function beginCast(player,character,root,key)
                 local point=root.Position:Lerp(target,i/6)
                 local ray=workspace:Raycast(point+Vector3.new(0,40,0),Vector3.new(0,-110,0),melee.rayparams(character))
                 local v=Instance.new("CFrameValue"); v.Name="Pillar_"..i
-                v.Value=CFrame.lookAt(ray and ray.Position or point,target+Vector3.new(0,3,0))
-                v:SetAttribute("RayHitMaterial",ray and ray.Material or Enum.Material.Slate)
+                v.Value=CFrame.lookAt(root.Position+root.CFrame.RightVector*(i-3.5)*3, (ray and ray.Position or point)+Vector3.new(0,2,0))
+                v:SetAttribute("RayHitMaterial",ray and ray.Material.Name or "Slate")
                 v:SetAttribute("RayHitColor",ray and ray.Instance.Color or Color3.fromRGB(90,90,100))
                 v:SetAttribute("RayPosition",ray and ray.Position or point)
                 v:SetAttribute("RayNormal",ray and ray.Normal or Vector3.yAxis)
@@ -277,7 +290,7 @@ local function releaseCast(player,character,root,key,shot)
             local proxy=proxies.C
             if proxy then
                 for _,v in ipairs(proxy:GetChildren()) do if v:IsA("CFrameValue") then
-                    strike(character,v.Value.Position+Vector3.new(0,7,0),14,data.Damage.C/3,0.5)
+                    strike(character,v:GetAttribute("RayPosition")+Vector3.new(0,7,0),14,data.Damage.C/3,0.5)
                 end end
             end
             cleanupCast("C")
@@ -296,7 +309,8 @@ local function releaseCast(player,character,root,key,shot)
         local proxy=Instance.new("CFrameValue"); proxy.Name="ControlTransmutation"; proxy.Value=endCF
         proxy.Parent=workspace._WorldOrigin
         fx("F",params(player,character,root,{Stage=2,Holding=kit.effectholding,StartCFrame=origin,
-            ProxyCFrame=proxy,EndCFrame=endCF,Humanoid=character.Humanoid,KnifeLanded=true}))
+            ProxyCFrame=proxy,EndCFrame=endCF,Humanoid=character.Humanoid,KnifeLanded=knifeEvent}))
+        pendingTeleport={player=player,root=root,destination=endCF,expires=os.clock()+3}
         root.CFrame=endCF
         root.AssemblyLinearVelocity=Vector3.zero
         Debris:AddItem(proxy,2)
@@ -340,6 +354,7 @@ kit=kitClass.new(tool,{
     holdkeys={Z=true,X=true,C=true,V=true,F=true},maxhold=3,
     canhold=function(player,character,root,key)
         if key=="V" and not current(character,root.Position) then return false end
+        if key=="Z" and room then return true end
         return spend(character,key)
     end,
     onholdstart=beginCast,onrelease=releaseCast,
@@ -382,6 +397,14 @@ kit=kitClass.new(tool,{
     end,
     onpassiveend=function() closeRoom() end,
 })
+knifeEvent.OnServerEvent:Connect(function(player)
+    local pending=pendingTeleport
+    if pending and player==pending.player and pending.root.Parent and os.clock()<=pending.expires then
+        pending.root.CFrame=pending.destination
+        pending.root.AssemblyLinearVelocity=Vector3.zero
+        pendingTeleport=nil
+    end
+end)
 local nativeHit=kit.hit
 function kit:hit(humanoid,amount,part)
     local character=self:attacker()
