@@ -326,14 +326,14 @@ local function releaseCast(player,character,root,key,shot)
                 if current(character,v.root.Position) and kit:canhit(v.model) then
                     local owner=Players:GetPlayerFromCharacter(v.model)
                     if owner then table.insert(caught,owner) end
-                    task.delay(5,function()
+                    task.delay(14.8,function()
                         if v.humanoid.Parent and character.Parent then kit:hit(v.humanoid,data.Damage.Ultimate,v.root) end
                     end)
                 end
             end
             fx("V_Cutscene",params(player,character,root,{Stage=2,CaughtPlayers=caught}))
-            kit.busyuntil=os.clock()+8
-            task.delay(9,function()
+            kit.busyuntil=os.clock()+16
+            task.delay(17,function()
                 if root.Parent then root.Anchored=false end
                 if character.Parent then character:SetAttribute("InControlCutscene",false) end
             end)
