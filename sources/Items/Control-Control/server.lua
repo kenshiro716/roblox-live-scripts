@@ -140,7 +140,8 @@ local function makeCube(player, character, root)
     proxy.Name=Http:GenerateGUID(false)
     proxy.Parent=room
     proxy:SetAttribute("SizeScale",1)
-    local holding=marker("Holding",false,proxy)
+    local holding=marker("Holding",true,proxy)
+    task.delay(0.15,function() if holding.Parent then holding.Value=false end end)
     table.insert(cubes,{proxy=proxy,point=result.Position})
     fx("M1.Fist_Inside",params(player,character,root,{
         Proxy=proxy,MousePos=point,Holding=holding,
@@ -204,6 +205,8 @@ local function releaseCast(player,character,root,key,shot)
     if tool.Parent~=character or character.Humanoid.Health<=0 then cleanupCast(key); return end
     local held=math.clamp(os.clock()-(started[key] or os.clock()),0,3)
     started[key]=nil
+    tool:SetAttribute("LastControlMove",key)
+    tool:SetAttribute("ControlMoveCount",(tool:GetAttribute("ControlMoveCount") or 0)+1)
     local m=castMode[key] or "Base"
     local inside=current(character,root.Position)
     local target=aim(root,inside and 220 or 120,inside)
@@ -250,12 +253,25 @@ local function releaseCast(player,character,root,key,shot)
             task.delay(0.45,function() if character.Parent then line(character,target,root.Position,9,data.Damage.C*0.5) end end)
         elseif m=="Dagger" then
             local victim=targetAt(character,root.Position,target,12)
+            local folder=Instance.new("Folder")
+            folder.Name="ControlGammaSlashes"; folder.Parent=room
+            for i=1,3 do
+                local slash=Instance.new("CFrameValue")
+                slash.Name="Slash_"..i; slash.Value=cf*CFrame.new((i-2)*4,0,0)
+                slash:SetAttribute("Id",Http:GenerateGUID(false)); slash.Parent=folder
+                local origin=slash.Value.Position
+                line(character,origin,target,10,data.Damage.C/3)
+                task.delay(0.6,function() if slash.Parent then slash:SetAttribute("Exploded",CFrame.new(target)) end end)
+            end
+            fx("CDagger",params(player,character,root,{Stage=2,ProxyFolder=folder,MousePos=target,Speed=160}))
+            Debris:AddItem(folder,4)
             if victim then
-                fx("CDagger",params(player,character,root,{Stage=3,EnemyChar=victim.model,Delay=0.5,Speed=160}))
-                strike(character,victim.root.Position,12,data.Damage.C*1.4,0.8)
-            else
-                line(character,root.Position,target,12,data.Damage.C)
-                fx("M1.Dagger_Inside",params(player,character,root,{Cast=true,HitCF=CFrame.new(target),PlaneCF=cf}))
+                task.delay(0.7,function()
+                    if victim.model.Parent and root.Parent then
+                        fx("CDagger",params(player,character,root,{Stage=3,EnemyChar=victim.model,Delay=0.5,Speed=160}))
+                        strike(character,victim.root.Position,12,data.Damage.C*0.4,0.8)
+                    end
+                end)
             end
         else
             local proxy=proxies.C
@@ -350,7 +366,11 @@ kit=kitClass.new(tool,{
     onhit=function(amount,humanoid) updateMeter(roomCharacter,math.min(8,amount*0.03)) end,
     onequip=function(player,character)
         local root=character:FindFirstChild("HumanoidRootPart")
-        if root then setMode(player,character,root,current(character,root.Position) and mode or "Dagger",true) end
+        if root then
+            local inside=current(character,root.Position)
+            setMode(player,character,root,inside and mode or "Dagger",true)
+            if not inside then tool:SetAttribute("ControlMode","Base"); character:SetAttribute("ControlMode","Base") end
+        end
         updateMeter(character,0)
     end,
     onunequip=function(player)
@@ -362,6 +382,15 @@ kit=kitClass.new(tool,{
     end,
     onpassiveend=function() closeRoom() end,
 })
+local nativeHit=kit.hit
+function kit:hit(humanoid,amount,part)
+    local character=self:attacker()
+    local root=character and character:FindFirstChild("HumanoidRootPart")
+    local victim=humanoid and humanoid.Parent
+    local victimRoot=victim and victim:FindFirstChild("HumanoidRootPart")
+    if root and current(character,root.Position) and victimRoot and not current(character,victimRoot.Position) then return false end
+    return nativeHit(self,humanoid,amount,part)
+end
 local connection
 connection=Run.Heartbeat:Connect(function()
     if ended then return end
