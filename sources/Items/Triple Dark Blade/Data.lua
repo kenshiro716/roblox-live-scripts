@@ -1,6 +1,6 @@
 return {
 	Cap = 600,
-	Lvl = { TAP = 1, Z = 1, X = 50 },
+	Lvl = { TAP = 1, Z = 1, X = 20 },
 	Cost = { TAP = 0, Z = 0, X = 0 },
 	Cooldown = { TAP = 0.35, Z = 10, X = 12 },
 	Damage = {

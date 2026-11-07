@@ -3,6 +3,7 @@ local serverstorage = game:GetService("ServerStorage")
 local runservice = game:GetService("RunService")
 
 local tool = script.Parent
+tool:SetAttribute("MovesetToolUid", game:GetService("HttpService"):GenerateGUID(false))
 local hitbox = require(serverstorage:WaitForChild("hitbox"))
 local util = require(replicatedstorage:WaitForChild("Util"))
 local fruitkit = require(serverstorage:WaitForChild("fruitkit"))
