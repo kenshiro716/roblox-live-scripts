@@ -48,4 +48,37 @@ for _,player in ipairs(game:GetService("Players"):GetPlayers()) do
         if container then for _,tool in ipairs(container:GetChildren()) do if tool:IsA("Tool") then repair(tool) end end end
     end
 end
+-- Publish skill metadata before combat initialization finishes, including first equip.
+local watched=setmetatable({}, {__mode="k"})
+local function watch(tool,player)
+    if not tool:IsA("Tool") or (tool.Name~="Triple Dark Blade" and tool.Name~="Control-Control") or watched[tool] then return end
+    watched[tool]=true
+    local function publish()
+        local gui=player:FindFirstChildOfClass("PlayerGui")
+        local source=storage.MovesetTemplates:FindFirstChild(tool.Name)
+        local data=tool:FindFirstChild("Data")
+        if not gui or not source or not data then return end
+        local modules=gui:FindFirstChild("MovesetModules")
+        if not modules then modules=Instance.new("Folder"); modules.Name="MovesetModules"; modules.Parent=gui end
+        local entry=modules:FindFirstChild(tool.Name)
+        if not entry then entry=Instance.new("Folder"); entry.Name=tool.Name; entry.Parent=modules end
+        entry:SetAttribute("MovesetToolUid",tool:GetAttribute("MovesetToolUid"))
+        if not entry:FindFirstChild("LegacyDataAggregate") then local copy=data:Clone(); copy.Name="LegacyDataAggregate"; copy.Parent=entry end
+        for _,child in ipairs(source:GetChildren()) do if not entry:FindFirstChild(child.Name) then child:Clone().Parent=entry end end
+    end
+    tool.Equipped:Connect(publish)
+    publish()
+end
+local function attach(player)
+    local function container(folder)
+        folder.ChildAdded:Connect(function(tool) watch(tool,player) end)
+        for _,tool in ipairs(folder:GetChildren()) do watch(tool,player) end
+    end
+    local backpack=player:FindFirstChildOfClass("Backpack")
+    if backpack then container(backpack) end
+    player.CharacterAdded:Connect(container)
+    if player.Character then container(player.Character) end
+end
+game:GetService("Players").PlayerAdded:Connect(attach)
+for _,player in ipairs(game:GetService("Players"):GetPlayers()) do attach(player) end
 return true
