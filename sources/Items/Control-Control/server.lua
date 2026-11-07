@@ -199,7 +199,7 @@ local function beginCast(player,character,root,key)
                 local v=Instance.new("CFrameValue"); v.Name="Pillar_"..i
                 v.Value=CFrame.lookAt(root.Position+root.CFrame.RightVector*(i-3.5)*3, (ray and ray.Position or point)+Vector3.new(0,2,0))
                 v:SetAttribute("RayHitMaterial",ray and ray.Material.Name or "Slate")
-                v:SetAttribute("RayHitColor",ray and ray.Instance.Color or Color3.fromRGB(90,90,100))
+                v:SetAttribute("RayHitColor",ray and (ray.Instance:IsA("BasePart") and ray.Instance.Color or workspace.Terrain:GetMaterialColor(ray.Material)) or Color3.fromRGB(90,90,100))
                 v:SetAttribute("RayPosition",ray and ray.Position or point)
                 v:SetAttribute("RayNormal",ray and ray.Normal or Vector3.yAxis)
                 v:SetAttribute("CreatedAt",workspace:GetServerTimeNow())
@@ -370,8 +370,10 @@ kit=kitClass.new(tool,{
         else
             combo=os.clock()-comboAt>1.2 and 1 or combo%3+1; comboAt=os.clock()
             if inside then
-                fx("M1.Dagger_Inside",params(player,character,root,{Cast=true,HitCF=CFrame.new(target),PlaneCF=facing(root,target)}))
-                line(character,root.Position,target,5,data.Damage.DaggerM1)
+                fx("M1.Dagger_Inside",params(player,character,root,{Cast=true}))
+                for _,victim in ipairs(line(character,root.Position,target,5,data.Damage.DaggerM1)) do
+                    fx("M1.Dagger_Inside",params(player,character,root,{HitCF=victim.root.CFrame,PlaneCF=facing(root,target)}))
+                end
             else
                 fx("M1.Dagger_Outside",params(player,character,root,{Combo=combo,StartCFrame=root.CFrame}))
                 line(character,root.Position,root.Position+root.CFrame.LookVector*14,5,data.Damage.BaseM1)
@@ -399,7 +401,7 @@ kit=kitClass.new(tool,{
 })
 knifeEvent.OnServerEvent:Connect(function(player)
     local pending=pendingTeleport
-    if pending and player==pending.player and pending.root.Parent and os.clock()<=pending.expires then
+    if pending and player==pending.player and pending.root.Parent and tool.Parent==pending.root.Parent and pending.root.Parent.Humanoid.Health>0 and os.clock()<=pending.expires then
         pending.root.CFrame=pending.destination
         pending.root.AssemblyLinearVelocity=Vector3.zero
         pendingTeleport=nil
