@@ -321,9 +321,20 @@ local function releaseCast(player,character,root,key,shot)
         local finish=CFrame.new(target+cf.LookVector*18)
         if held>=1.2 and meter>=100 then
             updateMeter(character,-100)
+            tool:SetAttribute("ControlUltimateActive",true)
+            local locked={}
+            local function lock(part)
+                table.insert(locked,{part=part,anchored=part.Anchored})
+                part.Anchored=true
+                part.AssemblyLinearVelocity=Vector3.zero
+            end
+            lock(root)
+            melee.stun(character,15.3)
             local caught={}
             for _,v in ipairs(hitbox.sphere(character,target,math.min(60,room:GetAttribute("Radius")))) do
                 if current(character,v.root.Position) and kit:canhit(v.model) then
+                    lock(v.root)
+                    melee.stun(v.model,15.3)
                     local owner=Players:GetPlayerFromCharacter(v.model)
                     if owner then table.insert(caught,owner) end
                     task.delay(14.8,function()
@@ -333,8 +344,11 @@ local function releaseCast(player,character,root,key,shot)
             end
             fx("V_Cutscene",params(player,character,root,{Stage=2,CaughtPlayers=caught}))
             kit.busyuntil=os.clock()+16
-            task.delay(17,function()
-                if root.Parent then root.Anchored=false end
+            task.delay(15.5,function()
+                for _,state in ipairs(locked) do
+                    if state.part.Parent then state.part.Anchored=state.anchored end
+                end
+                tool:SetAttribute("ControlUltimateActive",false)
                 if character.Parent then character:SetAttribute("InControlCutscene",false) end
             end)
         else

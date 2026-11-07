@@ -1316,6 +1316,7 @@ return function(p13) -- line: 296
 							local cFrame5 = CFrame.lookAt(v256.Position, v256.Position + v256.Normal)
 							local cFrame6 = CFrame.Angles(math.random() * 3.141592653589793 / 5, math.random() * 3.141592653589793 / 5, math.random() * 3.141592653589793 / 5)
 							local clone20 = t5.Templates[math.random(#t5.Templates)]:Clone()
+							clone20.PrimaryPart = clone20.PrimaryPart or clone20:FindFirstChildWhichIsA("BasePart", true)
 
 							clone20.PrimaryPart.Color = v256.Instance.Color
 							clone20.PrimaryPart.Material = v256.Instance.Material
