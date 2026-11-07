@@ -4,7 +4,7 @@ Server combat sources run through GitHubLiveLoader. Control-Control uses only th
 
 ## One-time Studio changes
 
-Publish the current Studio place once to include the Control-Control MovesetTemplates client config, the repaired StarterPack Triple Dark Blade bridge, and the two patched ControlRework client effects backed up here. GitHub cannot replace LocalScript or ModuleScript client source at runtime.
+Publish the current Studio place once to include the Control-Control MovesetTemplates client config, the repaired StarterPack Triple Dark Blade bridge, and the patched ControlRework client effects backed up here. GitHub cannot replace LocalScript or ModuleScript client source at runtime.
 
 ## Controls
 
